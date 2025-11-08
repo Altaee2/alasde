@@ -2,9 +2,12 @@
 <html lang="ar" dir="rtl">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محمد الاسدي للبورسلين | متخصصون في التركيبات الحديثة</title>
     <meta property="og:title" content="محمد الاسدي للبورسلين | متخصصون في التركيبات الحديثة">
     <meta property="og:description" content="تواصل الآن مع المهندس محمد الاسدي للبورسلين و المرمر - فيسبوك، تيك توك، واتساب، والموقع الجغرافي.">
-    <meta property="og:url" content="www.alasadey.likesyou.org">
+    <meta property="og:url" content="www.alasadey.free.nf">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <!-- Tailwind CSS CDN -->
@@ -17,10 +20,14 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary-dark': '#111827', // Dark Slate
-                        'secondary-dark': '#1F2937', // Darker gray for cards
-                        'accent': '#10b981', // Emerald green
-                        'accent-hover': '#059669', // Darker Emerald
+                        'primary-dark': '#0f172a', // Slate 900
+                        'secondary-dark': '#1e293b', // Slate 800 for cards
+                        'accent': '#34d399', // Emerald 400 (Brighter for dark theme)
+                        'accent-hover': '#10b981', // Emerald 600
+                        'whatsapp-green': '#25D366',
+                        'facebook-blue': '#1877F2',
+                        'youtube-red': '#FF0000',
+                        'telegram-blue': '#2AABEE',
                     },
                     fontFamily: {
                         sans: ['Inter', 'Arial', 'sans-serif'],
@@ -30,18 +37,26 @@
         }
     </script>
     <style>
-        /* Custom animation for link hover */
-        
+        /* Custom animation for link hover and pill shape */
         .contact-link {
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s, color 0.3s;
+            min-height: 56px; /* Ensure a minimum height for touch target */
         }
         
         .contact-link:hover {
             transform: translateY(-5px) scale(1.03);
-            box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.4), 0 4px 6px -2px rgba(16, 185, 129, 0.1);
+            /* Dynamic shadow based on accent color */
+            box-shadow: 0 10px 15px -3px rgba(52, 211, 153, 0.4), 0 4px 6px -2px rgba(52, 211, 153, 0.1);
+            color: white !important; /* Force white text on hover */
         }
-        /* Style for the main container to ensure it fills the viewport on load */
-        
+
+        /* Adjusting the specific link hover effects to match brand colors */
+        .link-facebook:hover { background-color: #1877F2; }
+        .link-tiktok:hover { background-color: #000000; }
+        .link-youtube:hover { background-color: #FF0000; }
+        .link-telegram:hover { background-color: #2AABEE; }
+
+        /* Style for the main container to ensure it fills the viewport */
         #main-content {
             min-height: 100vh;
         }
@@ -51,22 +66,24 @@
 <body class="bg-primary-dark text-gray-100 font-sans p-4">
 
     <!-- Main Content Container -->
-    <div id="main-content" class="max-w-4xl mx-auto py-10">
+    <div id="main-content" class="max-w-4xl mx-auto py-10 px-2 sm:px-6">
 
         <!-- Header Section -->
         <header class="text-center mb-12">
-            <h1 class="text-5xl md:text-6xl font-extrabold text-accent mb-2 tracking-tight">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-accent mb-1 tracking-tight">
                 محمد الاسدي للبورسلين
             </h1>
-            <h1 class="text-5xl md:text-6xl font-extrabold text-accent mb-2 tracking-tight">
+            <!-- Changed the second header to a sub-slogan with slightly smaller size -->
+            <p class="text-xl sm:text-2xl font-bold text-gray-300 mb-4">
                 الاسدي لديكم لا خوف عليكم (الاسدي للفقير)
-            </h1>
-            <p class="text-lg md:text-xl text-gray-400 mb-6 font-medium">
+            </p>
+            <p class="text-md sm:text-lg text-gray-400 mb-6 font-medium">
                 بإدارة المهندس محمد الاسدي
             </p>
 
             <!-- Personal Image Placeholder -->
             <div class="inline-block relative">
+                <!-- Using a placeholder image URL as 'a.jpg' is local and won't load -->
                 <img src="a.jpg" alt="صورة شخصية للمهندس محمد الاسدي" class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-accent shadow-xl object-cover transform transition duration-500 hover:rotate-3">
                 <!-- Animated Ring -->
                 <div class="absolute inset-0 rounded-full border-4 border-accent opacity-20 animate-ping"></div>
@@ -75,56 +92,67 @@
 
         <!-- Contact Links Grid -->
         <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center text-accent mb-8">
-                تواصل معنا - حسابات ومكالمات
+            <h2 class="text-2xl sm:text-3xl font-bold text-center text-accent mb-8">
+                تواصل معنا الآن
             </h2>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Main Contact Grid: Now 2 columns on mobile, 3 on larger screens -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6">
 
-                <!-- 1. Facebook -->
-                <a href="https://www.facebook.com/share/1EKPaUaPAf/" target="_blank" class="contact-link bg-secondary-dark p-6 rounded-xl flex items-center justify-center space-x-4 transition duration-300 hover:bg-blue-700">
-                    <i class="fab fa-facebook text-3xl text-white"></i>
-                    <span class="text-lg font-semibold">  فيسبوك </span>
+                <!-- 1. Facebook (Pill Shape & Brand Color Hover) -->
+                <a href="https://www.facebook.com/share/1EKPaUaPAf/" target="_blank"
+                    class="contact-link link-facebook bg-secondary-dark p-4 rounded-full flex items-center justify-center space-x-4 border border-gray-700 hover:border-facebook-blue">
+                    <i class="fab fa-facebook text-2xl text-facebook-blue group-hover:text-white"></i>
+                    <span class="text-lg font-semibold flex-grow text-center">فيسبوك</span>
                 </a>
 
-                <!-- 2. TikTok -->
-                <a href="https://www.tiktok.com/@av6_u?is_from_webapp=1&sender_device=pc" target="_blank" class="contact-link bg-secondary-dark p-6 rounded-xl flex items-center justify-center space-x-4 transition duration-300 hover:bg-black">
-                    <i class="fab fa-tiktok text-3xl text-white"></i>
-                    <span class="text-lg font-semibold">تيك توك</span>
+                <!-- 2. TikTok (Pill Shape & Brand Color Hover) -->
+                <a href="https://www.tiktok.com/@av6_u?is_from_webapp=1&sender_device=pc" target="_blank"
+                    class="contact-link link-tiktok bg-secondary-dark p-4 rounded-full flex items-center justify-center space-x-4 border border-gray-700 hover:border-black">
+                    <i class="fab fa-tiktok text-2xl"></i>
+                    <span class="text-lg font-semibold flex-grow text-center">تيك توك</span>
                 </a>
 
-                <!-- 3. YouTube -->
-                <a href="https://youtube.com/@almuhandisr?si=OFGJ9xeTS9wWjJLq" target="_blank" class="contact-link bg-secondary-dark p-6 rounded-xl flex items-center justify-center space-x-4 transition duration-300 hover:bg-red-600">
-                    <i class="fab fa-youtube text-3xl text-white"></i>
-                    <span class="text-lg font-semibold">يوتيوب</span>
+                <!-- 3. YouTube (Pill Shape & Brand Color Hover) -->
+                <a href="https://youtube.com/@almuhandisr?si=OFGJ9xeTS9wWjJLq" target="_blank"
+                    class="contact-link link-youtube bg-secondary-dark p-4 rounded-full flex items-center justify-center space-x-4 border border-gray-700 hover:border-youtube-red">
+                    <i class="fab fa-youtube text-2xl text-youtube-red"></i>
+                    <span class="text-lg font-semibold flex-grow text-center">يوتيوب</span>
                 </a>
 
-                <!-- 4. Telegram -->
-                <a href="https://t.me/mhommed111" target="_blank" class="contact-link bg-secondary-dark p-6 rounded-xl flex items-center justify-center space-x-4 transition duration-300 hover:bg-blue-500">
-                    <i class="fab fa-telegram-plane text-3xl text-white"></i>
-                    <span class="text-lg font-semibold">تليجرام</span>
+                <!-- 4. Telegram (Pill Shape & Brand Color Hover) -->
+                <a href="https://t.me/mhommed111" target="_blank"
+                    class="contact-link link-telegram bg-secondary-dark p-4 rounded-full flex items-center justify-center space-x-4 border border-gray-700 hover:border-telegram-blue">
+                    <i class="fab fa-telegram-plane text-2xl text-telegram-blue"></i>
+                    <span class="text-lg font-semibold flex-grow text-center">تليجرام</span>
                 </a>
 
-                <!-- Phone Numbers & WhatsApp (Using Grid for 3 Numbers) -->
-                <div class="col-span-1 sm:col-span-2 lg:col-span-3">
+                <!-- Phone Numbers & WhatsApp: A dedicated sub-grid for clarity -->
+                <div class="col-span-1 sm:col-span-2 mt-4">
+                    <h3 class="text-xl font-semibold text-center text-gray-400 mb-4">
+                        أرقام الاتصال المباشر وواتساب
+                    </h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <!-- WhatsApp 1 -->
-                        <a href="tel:+9647730083843" class="contact-link bg-secondary-dark p-4 rounded-xl flex flex-col items-center transition duration-300 hover:bg-accent-hover text-center">
-                            <i class="fab fa-whatsapp text-2xl mb-2 text-accent"></i>
-                            <span class="font-bold text-sm">واتساب (1)</span>
-                            <span class="text-sm text-gray-300">+964 07730083843</span>
+                        <a href="tel:+9647730083843"
+                            class="contact-link bg-secondary-dark p-4 rounded-xl flex flex-col items-center justify-center transition duration-300 hover:bg-whatsapp-green hover:border-whatsapp-green border border-gray-700 text-center">
+                            <i class="fab fa-whatsapp text-2xl mb-1 text-whatsapp-green"></i>
+                            <span class="font-bold text-base">واتساب (1)</span>
+                            <span class="text-sm text-gray-300 hover:text-white mt-1">+964 07730083843</span>
                         </a>
                         <!-- WhatsApp 2 -->
-                        <a href="tel:+9647700011020" class="contact-link bg-secondary-dark p-4 rounded-xl flex flex-col items-center transition duration-300 hover:bg-accent-hover text-center">
-                            <i class="fab fa-whatsapp text-2xl mb-2 text-accent"></i>
-                            <span class="font-bold text-sm">واتساب (2)</span>
-                            <span class="text-sm text-gray-300">+964 07700011020</span>
+                        <a href="tel:+9647700011020"
+                            class="contact-link bg-secondary-dark p-4 rounded-xl flex flex-col items-center justify-center transition duration-300 hover:bg-whatsapp-green hover:border-whatsapp-green border border-gray-700 text-center">
+                            <i class="fab fa-whatsapp text-2xl mb-1 text-whatsapp-green"></i>
+                            <span class="font-bold text-base">واتساب (2)</span>
+                            <span class="text-sm text-gray-300 hover:text-white mt-1">+964 07700011020</span>
                         </a>
-                        <!-- WhatsApp 3 (or general phone) -->
-                        <a href="tel:+9647808037071" class="contact-link bg-secondary-dark p-4 rounded-xl flex flex-col items-center transition duration-300 hover:bg-accent-hover text-center">
-                            <i class="fas fa-phone text-2xl mb-2 text-accent"></i>
-                            <span class="font-bold text-sm">هاتف مباشر (3)</span>
-                            <span class="text-sm text-gray-300">+964 07808037071</span>
+                        <!-- Phone 3 -->
+                        <a href="tel:+9647808037071"
+                            class="contact-link bg-secondary-dark p-4 rounded-xl flex flex-col items-center justify-center transition duration-300 hover:bg-accent-hover hover:border-accent-hover border border-gray-700 text-center">
+                            <i class="fas fa-phone text-2xl mb-1 text-accent"></i>
+                            <span class="font-bold text-base">هاتف مباشر (3)</span>
+                            <span class="text-sm text-gray-300 hover:text-white mt-1">+964 07808037071</span>
                         </a>
                     </div>
                 </div>
@@ -133,18 +161,20 @@
         </section>
 
         <!-- Geographical Location Section -->
-        <section class="bg-secondary-dark p-8 rounded-xl shadow-2xl">
-            <h2 class="text-3xl font-bold text-center text-accent mb-6">
-                الموقع الجغرافي
+        <section class="bg-secondary-dark p-6 sm:p-8 rounded-xl shadow-2xl border border-gray-700">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center text-accent mb-6">
+                الموقع الجغرافي للعمل
             </h2>
             <div class="flex flex-col items-center">
                 <i class="fas fa-map-marker-alt text-4xl text-accent mb-4 animate-bounce"></i>
-                <p class="text-gray-300 text-center mb-4 text-lg">
-                    للوصول إلينا عبر خرائط جوجل، يرجى النقر على الرابط أدناه.
+                <p class="text-gray-300 text-center mb-6 text-lg">
+                    للعمل في كافة محافظات العراق، يرجى التواصل معنا للحجز المسبق.
                 </p>
-                <!-- Placeholder for Google Maps Link -->
-                <a href="https://maps.app.goo.gl/aCccvYpEoB8Xju1w7" target="_blank" class="w-full md:w-auto px-8 py-3 bg-accent text-primary-dark font-bold text-lg rounded-lg shadow-lg transition duration-300 hover:bg-accent-hover hover:text-white transform hover:scale-105">
-                    عرض الموقع على الخريطة
+                <!-- Location Button (Pill Shape for consistency) -->
+                <a href="https://maps.app.goo.gl/aCccvYpEoB8Xju1w7" target="_blank"
+                    class="w-full sm:w-2/3 lg:w-1/2 px-8 py-3 bg-accent text-primary-dark font-extrabold text-lg rounded-full shadow-lg transition duration-300 hover:bg-accent-hover hover:text-white transform hover:scale-105 text-center">
+                    <i class="fas fa-location-dot ml-2"></i>
+                    عرض الموقع على الخريطة (للمكتب/الورشة)
                 </a>
             </div>
         </section>
@@ -152,6 +182,7 @@
         <!-- Footer -->
         <footer class="text-center mt-12 pt-6 border-t border-gray-700 text-gray-500 text-sm">
             <p>&copy; <span id="currentYear"></span> محمد الاسدي للبورسلين. جميع الحقوق محفوظة.</p>
+            <p class="mt-1">تصميم وتنفيذ المهندس محمد الاسدي</p>
         </footer>
     </div>
 
@@ -160,6 +191,5 @@
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 </body>
-
 
 </html>
