@@ -4,191 +4,977 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محمد الاسدي للبورسلين | متخصصون في التركيبات الحديثة</title>
-    <meta property="og:title" content="محمد الاسدي للبورسلين | متخصصون في التركيبات الحديثة">
-    <meta property="og:description" content="تواصل الآن مع المهندس محمد الاسدي للبورسلين و المرمر - فيسبوك، تيك توك، واتساب، والموقع الجغرافي.">
-    <meta property="og:url" content="www.alasadey.free.nf">
+    <title>شركة الأسدي للبورسلين</title>
+    <meta name="description" content="المهندس محمد الأسدي – متخصصون في البورسلين والمرمر والرخام لكافة محافظات العراق بأعلى معايير الجودة.">
+
+    <!-- ── Open Graph / Facebook / Telegram / WhatsApp Preview ── -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alasadey.free.nf/">
+    <meta property="og:title" content="شركة الأسدي للبورسلين والمرمر | المهندس محمد الأسدي">
+    <meta property="og:description" content="متخصصون في البورسلين والمرمر لكافة محافظات العراق بأعلى معايير الجودة.">
+    <!-- صورة المعاينة برابط كامل مطلق -->
+    <meta property="og:image" content="https://alasadey.free.nf/a.jpg">
+    <meta property="og:image:secure_url" content="https://alasadey.free.nf/a.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+
+    <!-- ── Twitter Card ── -->
     <meta name="twitter:card" content="summary_large_image">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Custom Tailwind Configuration -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary-dark': '#0f172a', // Slate 900
-                        'secondary-dark': '#1e293b', // Slate 800 for cards
-                        'accent': '#34d399', // Emerald 400 (Brighter for dark theme)
-                        'accent-hover': '#10b981', // Emerald 600
-                        'whatsapp-green': '#25D366',
-                        'facebook-blue': '#1877F2',
-                        'youtube-red': '#FF0000',
-                        'telegram-blue': '#2AABEE',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'Arial', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <meta name="twitter:url" content="https://alasadey.free.nf/">
+    <meta name="twitter:title" content="شركة الأسدي للبورسلين والمرمر | المهندس محمد الأسدي">
+    <meta name="twitter:description" content="متخصصون في البورسلين والمرمر لكافة محافظات العراق بأعلى معايير الجودة.">
+    <meta name="twitter:image" content="https://alasadey.free.nf/a.jpg">
+
+    <!-- ── Favicon (أيقونة الموقع) ── -->
+    <link rel="icon" type="image/jpeg" href="a.jpg">
+    <link rel="apple-touch-icon" href="a.jpg">
+    <!-- Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
-        /* Custom animation for link hover and pill shape */
-        .contact-link {
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s, color 0.3s;
-            min-height: 56px; /* Ensure a minimum height for touch target */
+         :root {
+            --bg-main: #030712;
+            --bg-card: rgba(17, 24, 39, 0.7);
+            --bg-glass: rgba(255, 255, 255, 0.03);
+            --gold-primary: #d4a942;
+            --gold-light: #f3d078;
+            --gold-dark: #99731f;
+            --gold-glow: rgba(212, 169, 66, 0.35);
+            --gold-border: rgba(212, 169, 66, 0.22);
+            --text-main: #f9fafb;
+            --text-muted: #9ca3af;
+            /* Social Brand Colors */
+            --fb: #1877F2;
+            --tt: #00f2fe;
+            --yt: #FF0000;
+            --tg: #2AABEE;
+            --wa: #25D366;
+            --ph: #d4a942;
         }
         
-        .contact-link:hover {
-            transform: translateY(-5px) scale(1.03);
-            /* Dynamic shadow based on accent color */
-            box-shadow: 0 10px 15px -3px rgba(52, 211, 153, 0.4), 0 4px 6px -2px rgba(52, 211, 153, 0.1);
-            color: white !important; /* Force white text on hover */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-
-        /* Adjusting the specific link hover effects to match brand colors */
-        .link-facebook:hover { background-color: #1877F2; }
-        .link-tiktok:hover { background-color: #000000; }
-        .link-youtube:hover { background-color: #FF0000; }
-        .link-telegram:hover { background-color: #2AABEE; }
-
-        /* Style for the main container to ensure it fills the viewport */
-        #main-content {
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
             min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            padding-bottom: 80px;
+            /* Space for float bar */
+        }
+        /* ── DYNAMIC CANVAS & BACKGROUND ── */
+        
+        .bg-wrapper {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .bg-gradient {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 15% 15%, rgba(212, 169, 66, 0.08) 0%, transparent 45%), radial-gradient(circle at 85% 85%, rgba(212, 169, 66, 0.06) 0%, transparent 45%), radial-gradient(circle at 50% 50%, rgba(10, 15, 30, 0.8) 0%, var(--bg-main) 100%);
+        }
+        
+        .bg-grid {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(212, 169, 66, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(212, 169, 66, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+        
+        canvas#sparks {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* ── MAIN CONTAINER ── */
+        
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 2rem 1.25rem 3rem;
+        }
+        /* ── HEADER SECTION ── */
+        
+        .header {
+            text-align: center;
+            margin-bottom: 2.2rem;
+        }
+        /* Avatar Styling */
+        
+        .avatar-wrap {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+        
+        .avatar-glow {
+            position: absolute;
+            inset: -15px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--gold-glow), transparent 70%);
+            animation: pulseGlow 3.5s ease-in-out infinite;
+        }
+        
+        .avatar-ring {
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, transparent 40%, var(--gold-primary), var(--gold-light), transparent 90%);
+            animation: spin 6s linear infinite;
+        }
+        
+        .avatar-img {
+            position: relative;
+            z-index: 2;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--gold-primary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 169, 66, 0.3);
+            background-color: #111;
+            transition: transform 0.4s ease;
+        }
+        
+        .avatar-wrap:hover .avatar-img {
+            transform: scale(1.04);
+        }
+        /* Badge Status */
+        
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 50px;
+            background: rgba(212, 169, 66, 0.1);
+            border: 1px solid var(--gold-border);
+            font-size: 0.8rem;
+            color: var(--gold-light);
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #22c55e;
+            box-shadow: 0 0 10px #22c55e;
+            animation: blink 1.8s infinite;
+        }
+        /* Titles & Slogans */
+        
+        .main-title {
+            font-size: clamp(2rem, 6vw, 2.4rem);
+            font-weight: 900;
+            line-height: 1.25;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+        
+        .main-title span {
+            background: linear-gradient(135deg, #fff 20%, var(--gold-light) 60%, var(--gold-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(212, 169, 66, 0.2);
+        }
+        
+        .slogan-box {
+            position: relative;
+            display: inline-block;
+            padding: 0.5rem 1.2rem;
+            margin: 0.6rem 0;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.02);
+            border-right: 3px solid var(--gold-primary);
+            border-left: 3px solid var(--gold-primary);
+        }
+        
+        .slogan-text {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #f3f4f6;
+            letter-spacing: -0.01em;
+        }
+        
+        .engineer-title {
+            font-size: 0.9rem;
+            color: var(--gold-light);
+            font-weight: 600;
+            opacity: 0.9;
+        }
+        /* ── SECTION DIVIDER ── */
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 2rem 0 1.2rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            letter-spacing: 0.05em;
+        }
+        
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold-border), transparent);
+        }
+        /* ── STATS CARDS ── */
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 1.8rem;
+        }
+        
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--gold-border);
+            border-radius: 14px;
+            padding: 1rem 0.5rem;
+            text-align: center;
+            backdrop-filter: blur(12px);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--gold-primary);
+        }
+        
+        .stat-number {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--gold-light);
+            text-shadow: 0 0 15px var(--gold-glow);
+        }
+        
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+            font-weight: 600;
+        }
+        /* ── LINK CARDS ── */
+        
+        .links-flex {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .link-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 14px 18px;
+            border-radius: 14px;
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            text-decoration: none;
+            color: var(--text-main);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(15px);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        .link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -100%;
+            width: 70%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transform: skewX(-20deg);
+            transition: right 0.6s ease;
+        }
+        
+        .link-card:hover::before {
+            right: 150%;
+        }
+        
+        .link-card:hover {
+            transform: translateY(-3px);
+            border-color: color-mix(in srgb, var(--card-clr, var(--gold-primary)) 50%, transparent);
+            box-shadow: 0 10px 25px -5px color-mix(in srgb, var(--card-clr, var(--gold-primary)) 25%, transparent);
+            background: rgba(30, 41, 59, 0.7);
+        }
+        
+        .card-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            color: var(--card-clr, var(--gold-primary));
+            background: color-mix(in srgb, var(--card-clr, var(--gold-primary)) 12%, transparent);
+            border: 1px solid color-mix(in srgb, var(--card-clr, var(--gold-primary)) 25%, transparent);
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .link-card:hover .card-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+        
+        .card-info {
+            flex: 1;
+        }
+        
+        .card-title {
+            font-size: 0.98rem;
+            font-weight: 700;
+            display: block;
+        }
+        
+        .card-subtitle {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+            display: block;
+        }
+        
+        .card-arrow {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        
+        .link-card:hover .card-arrow {
+            color: var(--card-clr, var(--gold-primary));
+            transform: translateX(-5px);
+        }
+        /* ── PHONES GRID ── */
+        
+        .phones-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        
+        @media(max-width: 540px) {
+            .phones-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .phone-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 16px 12px;
+            border-radius: 14px;
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            text-decoration: none;
+            color: var(--text-main);
+            text-align: center;
+            backdrop-filter: blur(12px);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .phone-card:hover {
+            transform: translateY(-4px);
+            border-color: color-mix(in srgb, var(--card-clr, var(--gold-primary)) 50%, transparent);
+            box-shadow: 0 10px 20px -5px color-mix(in srgb, var(--card-clr, var(--gold-primary)) 30%, transparent);
+        }
+        
+        .phone-card .card-icon {
+            margin-bottom: 10px;
+        }
+        
+        .phone-title {
+            font-size: 0.88rem;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+        
+        .phone-number {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            direction: ltr;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .copy-btn {
+            margin-top: 8px;
+            padding: 3px 10px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.68rem;
+            color: var(--gold-light);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .copy-btn:hover {
+            background: var(--gold-primary);
+            color: #000;
+        }
+        /* ── GALLERY SECTION ── */
+        
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .filter-btn {
+            padding: 5px 14px;
+            border-radius: 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--gold-border);
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.25s;
+        }
+        
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--gold-primary);
+            color: #000;
+            font-weight: 700;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 140px;
+            border: 1px solid var(--gold-border);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 70%);
+            display: flex;
+            align-items: flex-end;
+            padding: 10px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--gold-light);
+        }
+        /* ── LOCATION BOX ── */
+        
+        .location-card {
+            background: linear-gradient(135deg, rgba(212, 169, 66, 0.08), rgba(17, 24, 39, 0.8));
+            border: 1px solid var(--gold-border);
+            border-radius: 18px;
+            padding: 1.8rem 1.2rem;
+            text-align: center;
+            backdrop-filter: blur(12px);
+            position: relative;
+        }
+        
+        .location-icon {
+            font-size: 2.2rem;
+            color: var(--gold-primary);
+            margin-bottom: 0.8rem;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .location-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 0.3rem;
+        }
+        
+        .location-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+        }
+        
+        .map-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 28px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+            color: #080c14;
+            font-weight: 800;
+            font-size: 0.9rem;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(212, 169, 66, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .map-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 169, 66, 0.5);
+        }
+        /* ── FLOATING BAR (MOBILE QUICK CALL) ── */
+        
+        .float-bar {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 99;
+            width: calc(100% - 30px);
+            max-width: 480px;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid var(--gold-border);
+            backdrop-filter: blur(20px);
+            border-radius: 40px;
+            padding: 8px 12px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+        
+        .float-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #fff;
+            transition: background 0.3s;
+        }
+        
+        .float-btn.wa {
+            background: rgba(37, 211, 102, 0.2);
+            color: #25D366;
+            border: 1px solid rgba(37, 211, 102, 0.4);
+        }
+        
+        .float-btn.ph {
+            background: rgba(212, 169, 66, 0.2);
+            color: var(--gold-light);
+            border: 1px solid var(--gold-border);
+        }
+        /* ── FOOTER ── */
+        
+        .footer {
+            text-align: center;
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(212, 169, 66, 0.15);
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+        
+        .footer span.gold {
+            color: var(--gold-light);
+            font-weight: 700;
+        }
+        /* ── ANIMATIONS ── */
+        
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes pulseGlow {
+            0%,
+            100% {
+                opacity: 0.4;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.08);
+            }
+        }
+        
+        @keyframes blink {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+        }
+        
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+        /* Fade-in Animation Classes */
+        
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+        
+        .delay-2 {
+            animation-delay: 0.2s;
+        }
+        
+        .delay-3 {
+            animation-delay: 0.3s;
+        }
+        
+        .delay-4 {
+            animation-delay: 0.4s;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 
-<body class="bg-primary-dark text-gray-100 font-sans p-4">
+<body>
 
-    <!-- Main Content Container -->
-    <div id="main-content" class="max-w-4xl mx-auto py-10 px-2 sm:px-6">
-
-        <!-- Header Section -->
-        <header class="text-center mb-12">
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-accent mb-1 tracking-tight">
-                محمد الاسدي للبورسلين
-            </h1>
-            <!-- Changed the second header to a sub-slogan with slightly smaller size -->
-            <p class="text-xl sm:text-2xl font-bold text-gray-300 mb-4">
-                الاسدي لديكم لا خوف عليكم (الاسدي للفقير)
-            </p>
-            <p class="text-md sm:text-lg text-gray-400 mb-6 font-medium">
-                بإدارة المهندس محمد الاسدي
-            </p>
-
-            <!-- Personal Image Placeholder -->
-            <div class="inline-block relative">
-                <!-- Using a placeholder image URL as 'a.jpg' is local and won't load -->
-                <img src="a.jpg" alt="صورة شخصية للمهندس محمد الاسدي" class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-accent shadow-xl object-cover transform transition duration-500 hover:rotate-3">
-                <!-- Animated Ring -->
-                <div class="absolute inset-0 rounded-full border-4 border-accent opacity-20 animate-ping"></div>
-            </div>
-        </header>
-
-        <!-- Contact Links Grid -->
-        <section class="mb-12">
-            <h2 class="text-2xl sm:text-3xl font-bold text-center text-accent mb-8">
-                تواصل معنا الآن
-            </h2>
-
-            <!-- Main Contact Grid: Now 2 columns on mobile, 3 on larger screens -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6">
-
-                <!-- 1. Facebook (Pill Shape & Brand Color Hover) -->
-                <a href="https://www.facebook.com/share/1EKPaUaPAf/" target="_blank"
-                    class="contact-link link-facebook bg-secondary-dark p-4 rounded-full flex items-center justify-center space-x-4 border border-gray-700 hover:border-facebook-blue">
-                    <i class="fab fa-facebook text-2xl text-facebook-blue group-hover:text-white"></i>
-                    <span class="text-lg font-semibold flex-grow text-center">فيسبوك</span>
-                </a>
-
-                <!-- 2. TikTok (Pill Shape & Brand Color Hover) -->
-                <a href="https://www.tiktok.com/@av6_u?is_from_webapp=1&sender_device=pc" target="_blank"
-                    class="contact-link link-tiktok bg-secondary-dark p-4 rounded-full flex items-center justify-center space-x-4 border border-gray-700 hover:border-black">
-                    <i class="fab fa-tiktok text-2xl"></i>
-                    <span class="text-lg font-semibold flex-grow text-center">تيك توك</span>
-                </a>
-
-                <!-- 3. YouTube (Pill Shape & Brand Color Hover) -->
-                <a href="https://youtube.com/@almuhandisr?si=OFGJ9xeTS9wWjJLq" target="_blank"
-                    class="contact-link link-youtube bg-secondary-dark p-4 rounded-full flex items-center justify-center space-x-4 border border-gray-700 hover:border-youtube-red">
-                    <i class="fab fa-youtube text-2xl text-youtube-red"></i>
-                    <span class="text-lg font-semibold flex-grow text-center">يوتيوب</span>
-                </a>
-
-                <!-- 4. Telegram (Pill Shape & Brand Color Hover) -->
-                <a href="https://t.me/mhommed111" target="_blank"
-                    class="contact-link link-telegram bg-secondary-dark p-4 rounded-full flex items-center justify-center space-x-4 border border-gray-700 hover:border-telegram-blue">
-                    <i class="fab fa-telegram-plane text-2xl text-telegram-blue"></i>
-                    <span class="text-lg font-semibold flex-grow text-center">تليجرام</span>
-                </a>
-
-                <!-- Phone Numbers & WhatsApp: A dedicated sub-grid for clarity -->
-                <div class="col-span-1 sm:col-span-2 mt-4">
-                    <h3 class="text-xl font-semibold text-center text-gray-400 mb-4">
-                        أرقام الاتصال المباشر وواتساب
-                    </h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <!-- WhatsApp 1 -->
-                        <a href="tel:+9647730083843"
-                            class="contact-link bg-secondary-dark p-4 rounded-xl flex flex-col items-center justify-center transition duration-300 hover:bg-whatsapp-green hover:border-whatsapp-green border border-gray-700 text-center">
-                            <i class="fab fa-whatsapp text-2xl mb-1 text-whatsapp-green"></i>
-                            <span class="font-bold text-base">واتساب (1)</span>
-                            <span class="text-sm text-gray-300 hover:text-white mt-1">+964 07730083843</span>
-                        </a>
-                        <!-- WhatsApp 2 -->
-                        <a href="tel:+9647700011020"
-                            class="contact-link bg-secondary-dark p-4 rounded-xl flex flex-col items-center justify-center transition duration-300 hover:bg-whatsapp-green hover:border-whatsapp-green border border-gray-700 text-center">
-                            <i class="fab fa-whatsapp text-2xl mb-1 text-whatsapp-green"></i>
-                            <span class="font-bold text-base">واتساب (2)</span>
-                            <span class="text-sm text-gray-300 hover:text-white mt-1">+964 07700011020</span>
-                        </a>
-                        <!-- Phone 3 -->
-                        <a href="tel:+9647808037071"
-                            class="contact-link bg-secondary-dark p-4 rounded-xl flex flex-col items-center justify-center transition duration-300 hover:bg-accent-hover hover:border-accent-hover border border-gray-700 text-center">
-                            <i class="fas fa-phone text-2xl mb-1 text-accent"></i>
-                            <span class="font-bold text-base">هاتف مباشر (3)</span>
-                            <span class="text-sm text-gray-300 hover:text-white mt-1">+964 07808037071</span>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Geographical Location Section -->
-        <section class="bg-secondary-dark p-6 sm:p-8 rounded-xl shadow-2xl border border-gray-700">
-            <h2 class="text-2xl sm:text-3xl font-bold text-center text-accent mb-6">
-                الموقع الجغرافي للعمل
-            </h2>
-            <div class="flex flex-col items-center">
-                <i class="fas fa-map-marker-alt text-4xl text-accent mb-4 animate-bounce"></i>
-                <p class="text-gray-300 text-center mb-6 text-lg">
-                    للعمل في كافة محافظات العراق، يرجى التواصل معنا للحجز المسبق.
-                </p>
-                <!-- Location Button (Pill Shape for consistency) -->
-                <a href="https://maps.app.goo.gl/aCccvYpEoB8Xju1w7" target="_blank"
-                    class="w-full sm:w-2/3 lg:w-1/2 px-8 py-3 bg-accent text-primary-dark font-extrabold text-lg rounded-full shadow-lg transition duration-300 hover:bg-accent-hover hover:text-white transform hover:scale-105 text-center">
-                    <i class="fas fa-location-dot ml-2"></i>
-                    عرض الموقع على الخريطة (للمكتب/الورشة)
-                </a>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="text-center mt-12 pt-6 border-t border-gray-700 text-gray-500 text-sm">
-            <p>&copy; <span id="currentYear"></span> محمد الاسدي للبورسلين. جميع الحقوق محفوظة.</p>
-            <p class="mt-1">تصميم وتنفيذ المهندس محمد الاسدي</p>
-        </footer>
+    <!-- Background Layer -->
+    <div class="bg-wrapper">
+        <div class="bg-gradient"></div>
+        <div class="bg-grid"></div>
+        <canvas id="sparks"></canvas>
     </div>
 
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- HEADER -->
+        <header class="header fade-up">
+            <div class="avatar-wrap">
+                <div class="avatar-glow"></div>
+                <div class="avatar-ring"></div>
+                <!-- صورة متوفرة مؤقتاً بحالة انعدام الصورة المحلية -->
+                <img src="a.jpg" onerror="this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=300&q=80'" alt="المهندس محمد الأسدي" class="avatar-img">
+            </div>
+
+            <div>
+                <span class="status-badge">
+                    <span class="status-dot"></span> جاهزون للتنفيذ — كافة محافظات العراق
+                </span>
+            </div>
+
+            <h1 class="main-title">
+                شركة <span>الأسدي</span> للبورسلين والمرمر
+            </h1>
+
+            <div class="slogan-box">
+                <p class="slogan-text">"الأسدي لديكم لا خوف عليكم &mdash; الأسدي للفقير"</p>
+            </div>
+
+            <p class="engineer-title">إدارة : المهندس محمد الأسدي</p>
+        </header>
+
+        <!-- STATS -->
+        <div class="stats-grid fade-up delay-1">
+            <div class="stat-card">
+                <div class="stat-number">+25</div>
+                <div class="stat-label">سنة خبرة</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">دقة وإتقان</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">18</div>
+                <div class="stat-label">محافظة نغطيها</div>
+            </div>
+        </div>
+
+        <!-- SOCIAL LINKS -->
+        <div class="divider fade-up delay-1">قنوات التواصل الرسمية</div>
+
+        <div class="links-flex fade-up delay-2">
+            <!-- Facebook 1 -->
+            <a href="https://www.facebook.com/share/1EKPaUaPAf/" target="_blank" rel="noopener noreferrer" class="link-card" style="--card-clr: var(--fb);">
+                <div class="card-icon"><i class="fab fa-facebook-f"></i></div>
+                <div class="card-info">
+                    <span class="card-title">فيسبوك (الصفحة الرسمية الأولى)</span>
+                    <span class="card-subtitle">تابع أحدث عروضنا الحصرية</span>
+                </div>
+                <i class="fas fa-arrow-left card-arrow"></i>
+            </a>
+
+            <!-- Facebook 2 -->
+            <a href="https://www.facebook.com/alasadey1" target="_blank" rel="noopener noreferrer" class="link-card" style="--card-clr: var(--fb);">
+                <div class="card-icon"><i class="fab fa-facebook-f"></i></div>
+                <div class="card-info">
+                    <span class="card-title">فيسبوك (الصفحة الثانية)</span>
+                    <span class="card-subtitle">تغطية الإنجازات اليومية ومواقع العمل</span>
+                </div>
+                <i class="fas fa-arrow-left card-arrow"></i>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@alasdey1?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="link-card" style="--card-clr: var(--tt);">
+                <div class="card-icon"><i class="fab fa-tiktok"></i></div>
+                <div class="card-info">
+                    <span class="card-title">تيك توك</span>
+                    <span class="card-subtitle">فيديوهات مباشرة ومقاطع   </span>
+                </div>
+                <i class="fas fa-arrow-left card-arrow"></i>
+            </a>
+
+            <!-- YouTube -->
+            <a href="https://youtube.com/@almuhandisr?si=OFGJ9xeTS9wWjJLq" target="_blank" rel="noopener noreferrer" class="link-card" style="--card-clr: var(--yt);">
+                <div class="card-icon"><i class="fab fa-youtube"></i></div>
+                <div class="card-info">
+                    <span class="card-title">قناة اليوتيوب</span>
+                    <span class="card-subtitle">شروحات هندسية واستعراض أعمال البورسلين</span>
+                </div>
+                <i class="fas fa-arrow-left card-arrow"></i>
+            </a>
+
+            <!-- Telegram -->
+            <a href="https://t.me/mhommed111" target="_blank" rel="noopener noreferrer" class="link-card" style="--card-clr: var(--tg);">
+                <div class="card-icon"><i class="fab fa-telegram-plane"></i></div>
+                <div class="card-info">
+                    <span class="card-title">تليجرام</span>
+                    <span class="card-subtitle">تواصل واستفسارات سريعة مباشر</span>
+                </div>
+                <i class="fas fa-arrow-left card-arrow"></i>
+            </a>
+        </div>
+
+
+        <!-- PHONES -->
+        <div class="divider fade-up delay-3">أرقام الاتصال والواتساب</div>
+
+        <div class="phones-grid fade-up delay-3">
+            <!-- WhatsApp 1 -->
+            <a href="https://wa.me/9647730083843?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20...%20%D8%B4%D8%B1%D9%83%D8%A9%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AF%D9%8A%20%D9%84%D9%84%D8%A8%D9%88%D8%B1%D8%B3%D9%84%D9%8A%D9%86%20%D8%A7%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%A8%D9%88%D8%B1%D8%B3%D9%84%D9%8A%D9%86%20%D9%84%D8%AF%D9%8A%D9%83%D9%85"
+                target="_blank" rel="noopener noreferrer" class="phone-card" style="--card-clr: var(--wa); text-decoration: none;">
+                <div class="card-icon"><i class="fab fa-whatsapp"></i></div>
+                <span class="phone-title">واتساب 1</span>
+                <span class="phone-number">+964 773 008 3843</span>
+                <button class="copy-btn" onclick="event.preventDefault(); event.stopPropagation(); copyNumber('+9647730083843')">نسخ الرقم</button>
+            </a>
+
+            <!-- WhatsApp 2 -->
+            <a href="https://wa.me/9647700011020?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20...%20%D8%B4%D8%B1%D9%83%D8%A9%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AF%D9%8A%20%D9%84%D9%84%D8%A8%D9%88%D8%B1%D8%B3%D9%84%D9%8A%D9%86%20%D8%A7%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%8ﻞ%D8%A8%D9%88%D8%B1%D8%B3%D9%84%D9%8A%D9%86%20%D9%84%D8%AF%D9%8A%D9%83%D9%85"
+                target="_blank" rel="noopener noreferrer" class="phone-card" style="--card-clr: var(--wa); text-decoration: none;">
+                <div class="card-icon"><i class="fab fa-whatsapp"></i></div>
+                <span class="phone-title">واتساب 2</span>
+                <span class="phone-number">+964 770 001 1020</span>
+                <button class="copy-btn" onclick="event.preventDefault(); event.stopPropagation(); copyNumber('+9647700011020')">نسخ الرقم</button>
+            </a>
+
+            <!-- Direct Call -->
+            <a href="tel:+9647808037071" class="phone-card" style="--card-clr: var(--ph); text-decoration: none;">
+                <div class="card-icon"><i class="fas fa-phone"></i></div>
+                <span class="phone-title">اتصال مباشر</span>
+                <span class="phone-number">+964 780 803 7071</span>
+                <button class="copy-btn" onclick="event.preventDefault(); event.stopPropagation(); copyNumber('+9647808037071')">نسخ الرقم</button>
+            </a>
+        </div>
+
+        <!-- LOCATION -->
+        <div class="divider fade-up delay-4">موقعنا وخريطتنا</div>
+
+        <div class="location-card fade-up delay-4">
+            <div class="location-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <h2 class="location-title">موقع المكتب الرئيسي</h2>
+            <p class="location-desc">نقدّم خدمات التوريد والتركيب لكافة محافظات العراق الحبيبة</p>
+            <a href="https://maps.app.goo.gl/aCccvYpEoB8Xju1w7" target="_blank" rel="noopener noreferrer" class="map-button">
+                <i class="fas fa-directions"></i> فتح الموقع في خرائط Google
+            </a>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer fade-up delay-4">
+            <p>&copy; <span id="yr"></span> <span class="gold">شركة الأسدي للبورسلين والمرمر</span> — جميع الحقوق محفوظة</p>
+            <p>إشراف وتنفيذ: <span class="gold">المهندس محمد الأسدي</span></p>
+        </footer>
+
+    </div>
+
+    <!-- FLOATING QUICK ACTION BAR -->
+    <div class="float-bar">
+        <a href="https://wa.me/9647730083843?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20...%20%D8%B4%D8%B1%D9%83%D8%A9%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AF%D9%8A%20%D9%84%D9%84%D8%A8%D9%88%D8%B1%D8%B3%D9%84%D9%8A%D9%86%20%D8%A7%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%A8%D9%88%D8%B1%D8%B3%D9%84%D9%8A%D9%86%20%D9%84%D8%AF%D9%8A%D9%83%D9%85"
+            target="_blank" class="float-btn wa">
+            <i class="fab fa-whatsapp"></i> واتساب مباشر
+        </a>
+        <a href="tel:+9647808037071" class="float-btn ph">
+            <i class="fas fa-phone-alt"></i> اتصال سريع
+        </a>
+    </div>
+
+    <!-- SCRIPTS -->
     <script>
-        // Set current year in the footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        // Update Copyright Year
+        document.getElementById('yr').textContent = new Date().getFullYear();
+
+        // Copy Phone Number Function
+        function copyNumber(num) {
+            const tempInput = document.createElement('input');
+            tempInput.value = num;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            // Notification Message
+            alert('تم نسخ الرقم: ' + num);
+        }
+
+        // Gallery Filter Logic
+        function filterGallery(type) {
+            const items = document.querySelectorAll('.gallery-item');
+            const btns = document.querySelectorAll('.filter-btn');
+
+            btns.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            items.forEach(item => {
+                if (type === 'all' || item.classList.contains(type)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Interactive Canvas Gold Sparks Animation
+        const canvas = document.getElementById('sparks');
+        const ctx = canvas.getContext('2d');
+        let width, height, particles = [];
+
+        function initCanvas() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            particles = [];
+
+            for (let i = 0; i < 45; i++) {
+                particles.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    radius: Math.random() * 2 + 0.5,
+                    vx: (Math.random() - 0.5) * 0.3,
+                    vy: (Math.random() - 0.5) * 0.3,
+                    alpha: Math.random() * 0.6 + 0.1,
+                    pulse: Math.random() * 0.02 + 0.005
+                });
+            }
+        }
+
+        function drawSparks() {
+            ctx.clearRect(0, 0, width, height);
+
+            particles.forEach(p => {
+                p.x += p.vx;
+                p.y += p.vy;
+                p.alpha += p.pulse;
+
+                if (p.alpha > 0.7 || p.alpha < 0.1) p.pulse *= -1;
+                if (p.x < 0) p.x = width;
+                if (p.x > width) p.x = 0;
+                if (p.y < 0) p.y = height;
+                if (p.y > height) p.y = 0;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(212, 169, 66, ${p.alpha})`;
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = '#d4a942';
+                ctx.fill();
+            });
+
+            requestAnimationFrame(drawSparks);
+        }
+
+        window.addEventListener('resize', initCanvas);
+        initCanvas();
+        drawSparks();
+
+        // 3D Tilt Effect on Cards
+        const cards = document.querySelectorAll('.link-card, .phone-card, .stat-card');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 12;
+                const rotateY = (centerX - x) / 12;
+
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+            });
+        });
     </script>
 </body>
 
